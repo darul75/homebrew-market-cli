@@ -5,6 +5,8 @@ class MarketCli < Formula
   sha256 "ed3e0e8ce1d559571d99b2a1225879aaa168654c5f15944aeb8d1f678452d9ee"
   license "MIT"
 
+  bottle :unneeded
+
   def install
     bin.install "market-cli"
   end
