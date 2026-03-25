@@ -1,11 +1,15 @@
 class MarketCli < Formula
   desc "Stock portfolio tracking CLI with real-time updates"
   homepage "https://github.com/darul75/market-cli"
-  url "https://github.com/darul75/market-cli/releases/download/v0.1.0/market-cli"
-  sha256 "ed3e0e8ce1d559571d99b2a1225879aaa168654c5f15944aeb8d1f678452d9ee"
+  version "0.1.0"
   license "MIT"
 
-  bottle :unneeded
+  on_macos do
+    on_arm do
+      url "https://github.com/darul75/market-cli/releases/download/v#{version}/market-cli-macos-arm64.tar.gz"
+      sha256 "c7fa0eda90b760383cac03bc4f679f7ebe7dfde92e89b6f02f3e8d3e14f4ed54"
+    end
+  end
 
   def install
     bin.install "market-cli"
